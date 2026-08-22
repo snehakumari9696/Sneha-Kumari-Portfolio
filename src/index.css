@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0b020a;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+.text-glow-pink {
+  text-shadow: 0 0 15px rgba(255, 0, 150, 0.7), 0 0 30px rgba(255, 0, 150, 0.4);
+}
+
+.text-glow-sm {
+  text-shadow: 0 0 8px rgba(255, 0, 150, 0.5);
+}
+
+.box-glow-pink {
+  box-shadow: 0 0 25px rgba(255, 0, 128, 0.35), inset 0 0 15px rgba(255, 0, 128, 0.15);
+}
+
+.box-glow-pink-lg {
+  box-shadow: 0 0 40px rgba(255, 0, 128, 0.5), inset 0 0 20px rgba(255, 0, 128, 0.2);
+}
+
+.card-glow-pink {
+  box-shadow: 0 0 20px rgba(230, 0, 126, 0.25), inset 0 0 12px rgba(230, 0, 126, 0.08);
+}
+
+.card-glow-hover:hover {
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.45), inset 0 0 15px rgba(255, 0, 128, 0.15);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes floatStar {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(15deg); }
+}
+
+.animate-float-star {
+  animation: floatStar 5s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b020a;
+}
+::-webkit-scrollbar-thumb {
+  background: #360729;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e6007e;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Sneha Kumari Portfolio",
+  "description": "A dark cyber-themed neon developer portfolio hero section replicating Sneha Kumari's reference design with circuit patterns, glowing cards, interactive tabs, and contact modal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
