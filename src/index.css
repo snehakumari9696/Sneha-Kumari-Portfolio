@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-parchment: #F4EFEA;
+    --gold-primary: #A98054;
+    --gold-light: #CFB085;
+    --gold-deep: #8B653B;
+    --gold-subtle: #D9C3A5;
+    --text-muted: #A89785;
+  }
+
+  body {
+    background-color: var(--bg-parchment);
+    color: #1c1917;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Vertical text utilities for cross-browser precision */
+.vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.vertical-lr {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+/* Paper grain overlay texture */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Subtle metallic gold gradient for hairlines and accents */
+.gold-hairline {
+  background: linear-gradient(180deg, #A98054 0%, #D4B68A 35%, #A98054 70%, #876137 100%);
+}
+
+.gold-hairline-h {
+  background: linear-gradient(90deg, #A98054 0%, #D4B68A 50%, #A98054 100%);
+}
+
+/* Custom delicate diamond sparkle */
+.sparkle-shape {
+  clip-path: polygon(50% 0%, 55% 45%, 100% 50%, 55% 55%, 50% 100%, 45% 55%, 0% 50%, 45% 45%);
+}

@@ -1,0 +1,331 @@
+import { Project, Experience, SkillCategory, Certification } from '../types/portfolio';
+
+export const PERSONAL_INFO = {
+  name: 'Sneha Kumari',
+  role: 'Software Developer',
+  tagline: 'Designing with clarity. Engineering with rigor.',
+  bio: 'B.Tech Computer Science student (Class of 2027) with hands-on experience building full-stack web applications with the MERN stack and Java. Strong in data structures and algorithms, with focus on backend architecture, REST API design, database modeling, and integrating AI/LLM APIs into applications. Seeking a Software Development Engineer Internship.',
+  location: 'Lucknow, India',
+  email: 'kumarisneha3824@gmail.com',
+  phone: '+91 8090542701',
+  university: 'Babu Banarasi Das University, Lucknow',
+  degree: 'Bachelor of Technology (B.Tech), Computer Science',
+  graduationYear: 'Expected 2027',
+  github: 'https://github.com/snehakumari9696',
+  linkedin: 'https://linkedin.com/in/snehakumari-sk',
+};
+
+export const PROJECTS: Project[] = [
+  {
+    id: 'syntron-ai',
+    title: 'SyntronAI',
+    subtitle: 'AI-Powered Codebase Intelligence Platform',
+    category: 'AI & Systems',
+    period: '2025',
+    highlight: 'AST parsing, dependency analysis & blast-radius detection',
+    technologies: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Groq AI', 'REST APIs', 'AST Parser'],
+    image: '/projects/syntron-ai.jpg',
+    description: [
+      'Engineered a full-stack AI-powered codebase intelligence platform with automated code review, deep structural code analysis, repository understanding, and developer assistance.',
+      'Implemented AST parsing, dependency graph analysis, impact analysis, and blast-radius detection to identify cross-file relationships and assess the risk of software changes.',
+      'Integrated Groq AI APIs for sub-second contextual codebase chat and automated PR feedback; designed modular RESTful APIs and optimized MongoDB data models.',
+    ],
+    metrics: 'Sub-second inference via Groq AI & multi-file blast radius computation',
+    architectureHighlights: [
+      'Abstract Syntax Tree (AST) parsing engine for static code analysis',
+      'Dependency graph constructor tracking import/export topologies',
+      'Context-aware prompt orchestrator streaming Groq LLM responses',
+      'Asynchronous task workers for deep repository indexing',
+    ],
+  },
+  {
+    id: 'social-voice-academy',
+    title: 'Social Voice Academy',
+    subtitle: 'AI-Powered Coding Mentor Platform',
+    category: 'Full Stack',
+    period: 'Jun – Aug 2026',
+    highlight: 'Awarded Top Project in GRAStech Cohort with Certificate of Excellence',
+    technologies: ['React.js', 'Next.js', 'Socket.io', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'AI API'],
+    image: '/projects/social-voice.jpg',
+    description: [
+      'Built and deployed a full-stack AI-powered coding mentor platform combining personalized learning roadmaps, automated code review, and skill-based guidance.',
+      'Implemented real-time collaborative "Dev Rooms" using React, WebSockets, and MongoDB for peer code discussions, live pairing practice, and coding challenges.',
+      'Designed secure JWT authentication, role management, and an achievement/badge progress dashboard supporting responsive desktop and mobile devices.',
+      'Recognized as the #1 top project in the GRAStech cohort by supervising engineering faculty.',
+    ],
+    metrics: '#1 Top Project in Cohort · Real-Time Collaborative Dev Rooms',
+    architectureHighlights: [
+      'WebSocket state synchronization for live peer code pairing',
+      'JWT token rotation with secure HTTP-only cookie storage',
+      'Automated challenge evaluator with streak and badge state machine',
+      'Curated AI prompt chaining for adaptive code mentoring',
+    ],
+  },
+  {
+    id: 'real-time-chat',
+    title: 'Real-Time Chat & AI Assistant',
+    subtitle: 'High-Concurrency Messaging System',
+    category: 'Full Stack',
+    period: '2025',
+    highlight: 'Multi-tiered Socket.io messaging with presence tracking & automated insights',
+    technologies: ['React.js', 'Next.js', 'Socket.io', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Bcrypt'],
+    image: '/projects/realtime-chat.jpg',
+    description: [
+      'Built a multi-tiered real-time messaging system using Socket.io and WebSockets to broadcast one-to-one and group messages with low latency across concurrent connections.',
+      'Designed RESTful APIs in Node.js/Express.js for user, chat, and message-history operations, backed by a MongoDB/Mongoose data layer.',
+      'Engineered online/offline presence tracking, timestamped delivery receipts, and conversation insights powered by external AI APIs.',
+      'Reasoned about distributed state consistency, deduplication, and message ordering across concurrent user sessions.',
+    ],
+    metrics: 'Low-latency broadcast across concurrent rooms with message synchronization',
+    architectureHighlights: [
+      'Socket room routing with connection heartbeat and reconnection logic',
+      'MongoDB indexed query pipeline for paginated message history',
+      'Bcrypt salted hashing and JWT claims verification middleware',
+    ],
+  },
+  {
+    id: 'ambaram',
+    title: 'Ambaram',
+    subtitle: 'AI Weather Prediction Platform',
+    category: 'Machine Learning',
+    period: '2024 – 2025',
+    highlight: 'Aggregated, cleaned & formatted raw historical weather datasets',
+    technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn', 'Git', 'GitHub'],
+    image: '/projects/ambaram.jpg',
+    description: [
+      'Collected and aggregated raw historical meteorological datasets for machine learning model training and predictive analytics.',
+      'Cleaned, preprocessed, and formatted multidimensional weather vectors using Python (Pandas, NumPy), eliminating noise and imputing missing attributes to optimize model accuracy.',
+      'Organized and version-controlled curated datasets on GitHub for cross-team machine learning pipeline integration.',
+    ],
+    metrics: 'Clean data pipeline optimizing training convergence and feature extraction',
+    architectureHighlights: [
+      'Vectorized data transformations for high-throughput normalization',
+      'Outlier detection and missing-value imputation pipeline',
+      'Automated schema validation on ingestion',
+    ],
+  },
+  {
+    id: 'ecommerce-platform',
+    title: 'Enterprise E-Commerce Engine',
+    subtitle: 'Spring Boot & Relational Data Architecture',
+    category: 'Full Stack',
+    period: '2024',
+    highlight: 'Spring Boot REST service layer with normalized SQL schema',
+    technologies: ['Java', 'Spring Boot', 'MySQL', 'JDBC', 'React.js', 'HTML/CSS/JS'],
+    image: '/projects/ecommerce.jpg',
+    description: [
+      'Designed and implemented a full-stack e-commerce platform supporting product browsing, shopping cart lifecycle, and simulated multi-step checkout.',
+      'Built modular CRUD REST endpoints in Spring Boot for catalog and cart operations, applying Object-Oriented Design patterns to keep services testable and decoupled.',
+      'Constructed a 3NF normalized relational schema in MySQL with indexed foreign keys, ensuring transactional consistency and fast query execution.',
+    ],
+    metrics: 'Normalized relational schema with ACID transactional integrity',
+    architectureHighlights: [
+      'Spring Service-Repository layered architecture with dependency injection',
+      'Relational schema enforcing foreign key cascade constraints',
+      'Optimized indexing on product categorization and order history',
+    ],
+  },
+  {
+    id: 'ai-learning-app',
+    title: 'AI Learning App',
+    subtitle: 'HCL Hackathon Finalist Project',
+    category: 'AI & Systems',
+    period: '2024',
+    highlight: 'Designed and built interactive UI for AI-driven education',
+    technologies: ['React.js', 'Tailwind CSS', 'JavaScript', 'REST APIs', 'Git'],
+    image: '/projects/syntron-ai.jpg',
+    description: [
+      'Designed and built the complete user interface using React and Tailwind CSS, creating a responsive, intuitive interface for AI-driven interactive learning.',
+      'Transformed complex hackathon requirements into reusable, accessible frontend components, optimizing client-side performance and navigational ergonomics.',
+      'Connected front-end views with backend APIs to stream real-time AI responses and user progress smoothly.',
+    ],
+    metrics: 'HCL Hackathon recognition for seamless interaction design and responsiveness',
+    architectureHighlights: [
+      'Component-driven modular design system built on Tailwind CSS',
+      'Optimistic UI state updates for immediate user feedback',
+    ],
+  },
+  {
+    id: 'mental-health-tracker',
+    title: 'Mood & Mental Well-being Tracker',
+    subtitle: 'Behavioral Logging & Trend Visualization',
+    category: 'Full Stack',
+    period: '2024',
+    highlight: 'Relational data model paired with responsive analytics charts',
+    technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Chart.js'],
+    image: '/projects/ambaram.jpg',
+    description: [
+      'Built backend logic and a robust data model to capture, store, and query daily mood and emotional entries with high temporal fidelity.',
+      'Developed a responsive frontend dashboard featuring intuitive logging interactions and longitudinal trend visualization charts.',
+    ],
+    metrics: 'Longitudinal analytics with clean visual trend curves',
+    architectureHighlights: [
+      'Time-series mood aggregation query pipeline in MongoDB',
+      'Accessible visualization widgets for emotional delta tracking',
+    ],
+  },
+];
+
+export const EXPERIENCES: Experience[] = [
+  {
+    id: 'omnira-cloud',
+    role: 'Full Stack Web Developer Intern',
+    company: 'Omnira Cloud',
+    period: '15 Aug 2026 – 15 Sept 2026',
+    location: 'Remote',
+    summary: 'Built scalable web applications across client-side interfaces and backend logic using full-stack technologies and cloud-backed deployments.',
+    achievements: [
+      'Built web applications across client-side interfaces and backend logic using full-stack technologies.',
+      'Developed responsive UI components and integrated RESTful APIs to improve performance and user experience.',
+      'Worked with cross-functional teams on database schema design, query optimization, and cloud-backed deployments.',
+    ],
+    skills: ['Full-Stack Development', 'RESTful APIs', 'Database Optimization', 'Cloud Architecture', 'React.js', 'Node.js'],
+  },
+  {
+    id: 'grastech',
+    role: 'MERN Stack Development Intern',
+    company: 'GRAStech',
+    period: 'Jun 2026 – Aug 2026',
+    location: 'India',
+    summary: 'Built and shipped "Social Voice Academy", earning the #1 project recognition in the cohort for technical rigor and innovation.',
+    achievements: [
+      'Built and deployed Social Voice Academy, an AI-powered coding mentor platform; owned backend architecture and MongoDB data modeling end to end.',
+      'Recognized as the top project in the cohort by supervising faculty; awarded a completion certificate.',
+    ],
+    skills: ['MERN Stack', 'Socket.io', 'JWT Authentication', 'AI API Integration', 'MongoDB', 'React.js'],
+  },
+  {
+    id: 'ybi-foundation',
+    role: 'Web Development Intern',
+    company: 'YBI Foundation',
+    period: 'Nov 2024 – Feb 2025',
+    location: 'India',
+    summary: 'Contributed to production web solutions, collaborating across Git workflows and resolving full-stack functional challenges.',
+    achievements: [
+      'Contributed to the development of web-based digital solutions as part of a collaborative engineering team across frontend and backend tiers.',
+      'Enforced Git/GitHub pull request workflows, branch management, and code reviews in an agile setting.',
+      'Diagnosed and resolved critical bugs across the stack, strengthening analytical and root-cause debugging capabilities.',
+      'Gained deep exposure to software development lifecycle (SDLC) best practices and real-world system integration.',
+    ],
+    skills: ['Web Development', 'Git & GitHub Workflows', 'Debugging & SDLC', 'JavaScript', 'HTML5/CSS3'],
+  },
+];
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    title: 'Languages & Core CS',
+    description: 'Foundational computer science rigor and algorithmic problem solving.',
+    skills: [
+      { name: 'Java', level: 'Strong', note: 'Object-Oriented Design, Collections, Multithreading' },
+      { name: 'Data Structures & Algorithms', level: 'Strong', note: 'Arrays, Two Pointers, Trees, Graphs, Dynamic Programming' },
+      { name: 'JavaScript', level: 'Advanced', note: 'ES6+, Async/Await, Event Loop, Closures' },
+      { name: 'SQL', level: 'Proficient', note: 'Relational Schemas, Complex Joins, Indexing' },
+      { name: 'Python', level: 'Proficient', note: 'Data Analysis, Pandas, NumPy, Scripting' },
+      { name: 'System Design', level: 'Foundational', note: 'Client-Server, Caching, Tiered Architecture' },
+    ],
+  },
+  {
+    title: 'Backend & Distributed Systems',
+    description: 'Scalable service layers, real-time channels, and secure authentications.',
+    skills: [
+      { name: 'Spring Boot & Spring Security', note: 'JWT Auth, REST Services, OOD Patterns' },
+      { name: 'Node.js & Express.js', note: 'RESTful API Design, Middleware, MVC Pattern' },
+      { name: 'Socket.io & WebSockets', note: 'Low-latency Real-time Multi-user Rooms' },
+      { name: 'JDBC & Hibernate', note: 'Data persistence, ORM concepts, SQL mapping' },
+      { name: 'RESTful Architecture', note: 'Stateless endpoints, HTTP semantics, Pagination' },
+      { name: 'Authentication & Security', note: 'JWT, Bcrypt hashing, Role-based Access' },
+    ],
+  },
+  {
+    title: 'Frontend & Creative Engineering',
+    description: 'Responsive, accessible, and high-performance user interfaces.',
+    skills: [
+      { name: 'React.js', note: 'Custom Hooks, Context API, Performance Profiling' },
+      { name: 'Next.js', note: 'SSR, Client/Server Component Boundaries' },
+      { name: 'Tailwind CSS', note: 'Design tokens, Utility-first layout, Fluid scales' },
+      { name: 'HTML5 & Modern CSS3', note: 'Semantic markup, Flexbox, Grid, CSS Variables' },
+      { name: 'Micro-interactions', note: 'Kinetic typography, Motion transitions, Sound FX' },
+    ],
+  },
+  {
+    title: 'Databases & Infrastructure',
+    description: 'Persistent data stores, relational normalization, and developer workflows.',
+    skills: [
+      { name: 'MySQL', note: 'Relational 3NF schemas, Constraints, Foreign Keys' },
+      { name: 'MongoDB', note: 'Mongoose schemas, Document aggregation, Indexes' },
+      { name: 'Git & GitHub', note: 'Feature branches, PR reviews, Versioning workflows' },
+      { name: 'Postman & API Testing', note: 'Endpoint verification, Mock servers, Auth headers' },
+      { name: 'Vercel & Render', note: 'Cloud continuous integration and deployment' },
+      { name: 'IntelliJ IDEA & VS Code', note: 'Integrated dev environments and debugging' },
+    ],
+  },
+  {
+    title: 'AI & Emerging Technologies',
+    description: 'Autonomous agents, code intelligence, and generative LLM integration.',
+    skills: [
+      { name: 'Generative AI & LLM APIs', note: 'Claude, ChatGPT, Groq API Integration' },
+      { name: 'Agentic AI Architecture', note: 'Automated code review, AI mentors, RAG foundations' },
+      { name: 'Prompt Engineering', note: 'Few-shot prompts, Structured JSON responses' },
+      { name: 'AST & Code Analysis', note: 'Static analysis, Blast radius, Dependency trees' },
+    ],
+  },
+];
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    title: 'Python Programming & Data Science Masterclass',
+    issuer: 'Udemy Certificate',
+    description: 'Mastered Python core fundamentals, object-oriented design, algorithm implementations, and data pipelines with NumPy and Pandas.',
+  },
+  {
+    title: 'Adobe Creative Interaction Hackathon — Design & Code Award',
+    issuer: 'Adobe Hackathon Certificate',
+    description: 'Recognized for engineering standout creative UI component architectures, interactive user flows, and high-performance motion frontend design.',
+  },
+  {
+    title: 'AI Innovation Hackathon — Certificate of Excellence',
+    issuer: 'AI Innovation Global Hackathon',
+    description: 'Awarded Certificate of Excellence for prototyping and deploying real-time AI-assisted tooling with LLM APIs and high-throughput backend services.',
+  },
+  {
+    title: 'Full Stack Web Development Training (MERN)',
+    issuer: 'Lernovate',
+    description: 'Intensive project-based training bridging academic computer science coursework with production industry software development.',
+  },
+  {
+    title: 'Top Project in Cohort Award (Social Voice Academy)',
+    issuer: 'GRAStech Internship',
+    description: 'Awarded #1 project by engineering faculty for building an AI-powered coding mentor and collaborative Dev Rooms.',
+  },
+  {
+    title: 'Maker Fellowship',
+    issuer: 'Mindler',
+    description: 'Selective leadership and technology innovation fellowship.',
+  },
+  {
+    title: 'SQL Database Programming',
+    issuer: 'Giraffe Academy (Cursa)',
+    description: 'Relational database schema modeling, ACID transactions, and complex SQL joins.',
+  },
+  {
+    title: 'Java Object-Oriented Programming',
+    issuer: 'Caleb Curry (Cursa)',
+    description: 'Deep dive into encapsulation, inheritance, polymorphism, design patterns, and JVM fundamentals.',
+  },
+];
+
+export const EDUCATION = {
+  institution: 'Babu Banarasi Das University, Lucknow',
+  degree: 'Bachelor of Technology (B.Tech) in Computer Science',
+  timeline: '2023 – Expected Graduation 2027',
+  coursework: [
+    'Data Structures & Algorithms',
+    'Object-Oriented Programming (Java)',
+    'Database Management Systems (DBMS)',
+    'Operating Systems',
+    'Computer Networks',
+    'System Design (Fresher Level)',
+    'Discrete Mathematics',
+    'Software Engineering Principles',
+  ],
+};
