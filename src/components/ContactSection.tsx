@@ -68,7 +68,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
             Let&apos;s build something <span className="italic font-serif font-normal text-[#8B653B]">exceptional</span> together.
           </h2>
           <p className="text-base sm:text-lg text-[#5C432C] mt-4 leading-relaxed font-normal">
-            Currently seeking a <strong>Software Development Engineer Internship</strong> to apply strong CS fundamentals, distributed systems rigor, and AI engineering to high-impact products.
+            Currently seeking <strong>Full-Time Job Opportunities</strong> to apply strong CS fundamentals, distributed systems rigor, and AI engineering to high-impact products.
           </p>
         </div>
 

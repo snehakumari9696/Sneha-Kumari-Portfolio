@@ -69,7 +69,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenResume }) => {
           Get In Touch.
         </h1>
         <p className="text-base sm:text-lg text-[#5C432C] max-w-2xl mb-12">
-          Actively seeking a <strong>Software Development Engineer Internship</strong>. Reach out for technical interviews, distributed systems discussions, or full-stack engineering collaborations.
+          Actively seeking <strong>Full-Time Job Opportunities</strong>. Reach out for technical interviews, distributed systems discussions, or full-stack engineering collaborations.
         </p>
 
         {/* Primary Email Transmission Card */}

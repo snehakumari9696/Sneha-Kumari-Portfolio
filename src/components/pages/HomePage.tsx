@@ -74,7 +74,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 <span>Status Benchmark</span>
                 <span className="text-emerald-700 font-bold flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                  Available for Internships
+                  Available for Jobs
                 </span>
               </div>
 
